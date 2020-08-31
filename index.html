@@ -22,50 +22,47 @@
 			font-size: 36px;
 			line-height: 40px;
 			font-weight: bold;
-			font-family: Century Gothic;
 		}
 		
 		h2 {
 			color: #003d74;
 			font-size: 18px;
-			font-family: Century Gothic;
 		}
 		h3 {
 			color: #003d74;
 			font-size: 18px;
 			font-weight: bold;
-			font-family: Century Gothic;
 		}
 		h4 {
 			color: #343434;
 			font-size: 18px;
 			font-weight: bold;
-			font-family: Century Gothic;
 		}
 		h5 {
 			color: #343434;
 			font-size: 18px;
-			font-family: Century Gothic;
 		}
 		p,li {
 			color:#343434;
 			font-size: 13px;
-			font-family: Century Gothic;
 		}
 		.date{
 			padding-top:5px;
 		}
-		
 		.container{
-			border: 3px solid #003d74;
 			padding: 10px;
 			max-width:970px;
 			margin-left: auto;
 			margin-right: auto;
+			font-family: "Century Gothic", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+		}
+		
+		.resume{
+			border: 3px solid #003d74;
 			/*box-shadow:2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4);*/
 			/*box-shadow:2px 2px 5px #000;*/
-			box-shadow:0 0 10px #000;
-			flex-wrap: wrap;
+			/*box-shadow:0 0 10px #000;*/
+			/*flex-wrap: wrap;*/
 		}
 		.icon{
 			width: 18px;
@@ -78,137 +75,299 @@
 			flex: 100%;
 			order:2;
 		}
+		body.cn{
+			line-height: 1.6;
+			letter-spacing: 10px;　  
+		}
+
 		
 	</style>
+	<script>
+		window.onload=showCN;
+        function showEN() {
+            var en = document.getElementById('en');
+            var cn = document.getElementById('cn');
+            if (en.style.display != 'block') { 
+                en.style.display = 'block';
+                cn.style.display = 'none';
+            } 
+        }
+		
+		function showCN() {
+            var en = document.getElementById('en');
+            var cn = document.getElementById('cn');
+            if (cn.style.display != 'block') { 
+                cn.style.display = 'block';
+                en.style.display = 'none';
+            } 
+        }
+
+    </script>
   </head>
   <body>
 	<div class="container">
-		<div class="experienced">
-			<div class="col-sm-12">
-				<h1>Janet Lin</h1>
-				<h2>Product Manager/ Software Engineer</h2>
-				<p class="col-sm-12">As a Product Manager, experience in Product Management, Roadmap Design, Control Schedule, and Agile procedures positively.<br/>
-			As a Software Engineer experienced Software Engineer with over 3 years. Demonstrated excellent skills in C#, MSSQL and Microservice. True team player with strengths in adaptability and accuracy.</p>
-			</div>
-			<div class="col-sm-9">
-				<h3>Work History</h3>
-				<hr/>
-				<div class="job-component">
-					<div class="col-sm-4"><h5 class="date">2018/11-2020/02</h5></div>
-					<div class="col-sm-8">
-						<h4>Product Manager</h4>
-						<h5>Winner Mayfair Group - Softall Co., Ltd</h5>
-						<p>
-							<ul>
-								<li>Liaised with clients to develop deep understanding of business needs and discuss requirements specifications.</li>
-								<li>Prototype designed and product development cycle managed, including iGaming Platform Backend, Reporting System, Bonus System, Revenue Share System, etc.</li>
-								<li>Build the product roadmap and execute on its associated releases.</li>
-								<li>Collected customer requirements, consulted with development teams and data analysis to build products based on customer data.</li>
-								<li>Documented user stories, specifications and product features.</li>
-								<li>Agile (Product Owner/ Scrum Master) - Break down the widest and most complex projects into small steps.</li>
-							</ul>
-						</p>
-					</div>
+		<a onclick="javascript:showEN();" href="#"> English</a>　|　<a onclick="javascript:showCN();" href="#">中文</a>
+		<div class="resume container" id="en">
+			<div class="experienced">
+				<div class="col-sm-12">
+					<h1>Janet Lin</h1>
+					<h2>Product Manager/ Software Engineer</h2>
+					<p class="col-sm-12">As a Product Manager, experience in Product Management, Roadmap Design, Control Schedule, and Agile procedures positively.<br/>
+				As a Software Engineer experienced Software Engineer with over 3 years. Demonstrated excellent skills in C#, MSSQL and Microservice. True team player with strengths in adaptability and accuracy.</p>
 				</div>
-				<div class="job-component">
-					<div class="col-sm-4"><h5 class="date">2015/09-2018/11</h5></div>
-					<div class="col-sm-8">
-						<h4>Software Engineer</h4>
-						<h5 class="col align-self-start">Winner Mayfair Group 
-							<p style="margin-left:3%; margin-top:1%; font-size: 14px;  line-height: 20px;">- Softall Co., Ltd (2018/07~2018/11)<br/>
-							- Growth Machine Limited (2017/04~2018/07)</br>
-							- Mayfair International Technologies (2015/09~2017/04)</p>
-						</h5>
-						<p>
-							<ul>
-								<li>Integrated system with various data stores, including MS SQL Server, MongoDB, Orient Graph database, Elastic Search, and REDIS cache.</li>
-								<li>Developing platform systems with micro-service structure.</li>
-								<li>Scrum Master - Helping team members understand project theory, practices, rules, and values.</li>
-								<li>Improving Reporting Performance - Build a new reporting system via C# multi-thread and Elastic Search. It replaced the old reporting system based on SQL Server stored procedure.</li>
-								<!--<li>Real-time Bonus System</li>-->
-								<!--<li>Affiliate System (Share Profit System )</li>-->
-								<li>Accounting System - Developing Web Spiders to compare data from providers and us automatically.</li>
-								<li>Developing Main Product: Real-time Bonus System, Reporting System, Affiliate System (Share Profit System ), Migration System, Third-party API integration (Game, payment, SMS, Call center, iovation...etc).</li>
-							</ul>
-						</p>
+				<div class="col-sm-9">
+					<h3>Work History</h3>
+					<hr/>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2018/11-2020/02</h5></div>
+						<div class="col-sm-8">
+							<h4>Product Manager</h4>
+							<h5>Winner Mayfair Group - Softall Co., Ltd</h5>
+							<p>
+								<ul>
+									<li>Liaised with clients to develop deep understanding of business needs and discuss requirements specifications.</li>
+									<li>Prototype designed and product development cycle managed, including iGaming Platform Backend, Reporting System, Bonus System, Revenue Share System, etc.</li>
+									<li>Build the product roadmap and execute on its associated releases.</li>
+									<li>Collected customer requirements, consulted with development teams and data analysis to build products based on customer data.</li>
+									<li>Documented user stories, specifications and product features.</li>
+									<li>Agile (Product Owner/ Scrum Master) - Break down the widest and most complex projects into small steps.</li>
+								</ul>
+							</p>
+						</div>
 					</div>
-				</div>
-				<div class="job-component">
-					<div class="col-sm-4"><h5 class="date">2012/09-2013/03</h5></div>
-					<div class="col-sm-8">
-						<h4>Software Engineer Intern</h4>
-						<h5>Academia Sinica <p style="margin-left:3%; font-size: 14px;">- Research Center for Information Technology Innovation</p></h5>
-						<p>
-							<ul>
-								<li>Partnered with company mentor to learn best practices in software design.</li>
-								<li>Using coding script: PHP, JSP, JAVA, MYSQL</li>
-								<li>Main Product: Video Steaming Platform Website</li>
-							</ul>
-						</p>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2015/09-2018/11</h5></div>
+						<div class="col-sm-8">
+							<h4>Software Engineer</h4>
+							<h5 class="col align-self-start">Winner Mayfair Group 
+								<p style="margin-left:3%; margin-top:1%; font-size: 14px;  line-height: 20px;">- Softall Co., Ltd (2018/07~2018/11)<br/>
+								- Growth Machine Limited (2017/04~2018/07)</br>
+								- Mayfair International Technologies (2015/09~2017/04)</p>
+							</h5>
+							<p>
+								<ul>
+									<li>Integrated system with various software technology and data stores, including C#,MS SQL Server, MongoDB, RabbitMQ, Elastic Search, REDIS cache ,and Orient Graph database.</li>
+									<li>Developing platform systems with micro-service structure.</li>
+									<li>Scrum Master - Helping team members understand project theory, practices, rules, and values.</li>
+									<li>Improving Reporting Performance - Build a new reporting system via C# multi-thread and Elastic Search. It replaced the old reporting system based on SQL Server stored procedure.</li>
+									<!--<li>Real-time Bonus System</li>-->
+									<!--<li>Affiliate System (Share Profit System )</li>-->
+									<li>Accounting System - Developing Web Spiders to compare data from providers and us automatically.</li>
+									<li>Developing Main Product: Real-time Bonus System, Reporting System, Affiliate System (Share Profit System ), Migration System, Third-party API integration (Game, payment, SMS, Call center, iovation...etc).</li>
+								</ul>
+							</p>
+						</div>
 					</div>
-				</div>
-				<div class="job-component">
-					<div class="col-sm-4"><h5 class="date">2011/09-2012/08</h5></div>
-					<div class="col-sm-8">
-						<h4>Software Engineer Intern</h4>
-						<h5>Compal Electronics, Inc.</h5>
-						<p>
-							<ul>
-								<li>Using C#, MSSQL maintained the Industrial Design HR system.</li>
-							</ul>
-						</p>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2012/09-2013/03</h5></div>
+						<div class="col-sm-8">
+							<h4>Software Engineer Intern</h4>
+							<h5>Academia Sinica <p style="margin-left:3%; font-size: 14px;">- Research Center for Information Technology Innovation</p></h5>
+							<p>
+								<ul>
+									<li>Partnered with company mentor to learn best practices in software design.</li>
+									<li>Using coding script: PHP, JSP, JAVA, MYSQL</li>
+									<li>Main Product: Video Steaming Platform Website</li>
+								</ul>
+							</p>
+						</div>
 					</div>
-				</div>
-				<h3>Education</h3>
-				<hr/>
-				<div class="job-component">
-					<div class="col-sm-4"><h5 class="date">2013/09-2015/07</h5></div>
-					<div class="col-sm-8">
-						<h4>National Taiwan University Of Science And Tech.</h5>
-						<h4>MBA:Department of Information Management</h4>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2011/09-2012/08</h5></div>
+						<div class="col-sm-8">
+							<h4>Software Engineer Intern</h4>
+							<h5>Compal Electronics, Inc.</h5>
+							<p>
+								<ul>
+									<li>Using C#, MSSQL maintained the Industrial Design HR system.</li>
+								</ul>
+							</p>
+						</div>
 					</div>
-				</div>
-				<div class="job-component">
-					<div class="col-sm-4"><h5 class="date">2009/09-2013/06</h5></div>
-					<div class="col-sm-8">
-						<h4>Shih Chien University</h5>
-						<h4>BBA:Information Technology And Management</h4>
-						<p>
-							<ul>
-								<li>Awarded 中華電信(CHT)2012創新應用大賽智慧家庭組 Second prize.</li>
-							</ul>
-						</p>
+					<h3>Education</h3>
+					<hr/>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2013/09-2015/07</h5></div>
+						<div class="col-sm-8">
+							<h4>National Taiwan University Of Science And Tech.</h5>
+							<h4>MBA:Department of Information Management</h4>
+						</div>
 					</div>
-				</div>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2009/09-2013/06</h5></div>
+						<div class="col-sm-8">
+							<h4>Shih Chien University</h5>
+							<h4>BBA:Information Technology And Management</h4>
+							<p>
+								<ul>
+									<li>Awarded 中華電信(CHT)2012創新應用大賽智慧家庭組 Second prize.</li>
+								</ul>
+							</p>
+						</div>
+					</div>
 
+				</div>
+			</div>
+			<div class="contactskill">
+				<div class="col-sm-3">
+					<h3>Contact</h3>
+					<hr/>
+					<p>Taipei City, Taiwan</p>
+					<p>janetlin229@gmail.com</p>
+					<a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" /></a>
+					<a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" /></a>
+				</div>
+				<div class="col-sm-3">
+					<h3>Skills</h3>
+					<hr/>
+					<p>- Research and trend analysis </p>
+					<p>- Product development  </p>
+					<p>- Project Management </p>
+					<p>- Agile </p>
+					<p>- C#/.Net Framework/ .Net Core </p>
+					<p>- MSSQL</p>
+					<p>- Micro Service/ docker</p>
+					<p>- Elastic Search/ Kibana </p>
+					<p>- Redis </p>
+					<p>- MongoDB  </p>
+					<p>- RabbitMQ</p>
+					<p>- Git</p>
+					<p>- HTML/CSS</p>
+					<!--<p>- React</p>-->
+				</div>
 			</div>
 		</div>
-		<div class="contactskill">
-			<div class="col-sm-3">
-				<h3>Contact</h3>
-				<hr/>
-				<p>Taipei City, Taiwan</p>
-				<p>janetlin229@gmail.com</p>
-				<a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" /></a>
-				<a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" /></a>
+		<!---------------------------------------------------------------------------->
+		<div class="resume container" id="cn" class="cn">
+			<div class="experienced">
+				<div class="col-sm-12">
+					<h1>林珏慧 Janet Lin</h1>
+					<h2>產品經理/ 軟體工程師</h2>
+					<p class="col-sm-12">作為工程師的我，喜歡思考每項開發帶來的價值。<br/>
+					作為產品管理者的我，喜歡思考產品規格是否符合市場需求，如何運用技術輔助決策且不被綁架。</p>
+				</div>
+				<div class="col-sm-9">
+					<h3>工作經歷</h3>
+					<hr/>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2018/11-2020/02</h5></div>
+						<div class="col-sm-8">
+							<h4>產品經理</h4>
+							<h5>Winner Mayfair Group - 索夫特科技有限公司</h5>
+							<p>
+								<ul>
+									<li>敏捷式開發管理 - 擔任Product Owner或Scrum Master，將大專案切分為小任務，協助開發團隊分階段完成目標，及排除相關困難。</li>
+									<li>溝通協調 - 與客戶溝通深入了解需求及背後的原因，每兩週定期與客戶共同檢視目前產品開發成品是否符合需求，以及確認即將開發的需求仍符合目前市場需求。</li>
+									<li>設計產品Prototype - 與客戶、UIUX設計師、開發團隊討論可行性，包含：遊戲平台管理後台, 報表系統, 紅利系統, 代理人廣告系統...等。</li>
+									<li>制定產品專案範圍 - 在有限時間內，透過與客戶、相關利害單位、開發團隊溝通，分析出每項需求的使用頻率、帶來的效益、開發優先順序等，制定出時程內產品專案開發的合理範圍。</li>
+									<li>資料分析 - 利用既有會員資料、用戶行為、交易紀錄，分析出具有價值的資料，例如：會員大多分布於某地區產品應確保該地區線路穩定、部分會員使用相同裝置上線將考慮這些帳號的回饋是否共同計算、從會員上線時間的曲線中選擇較少人上線的時段做產品維護時間...等原始資料統整及分析。</li>
+									<li>轉移系統規劃 - 與舊技術團隊溝通並規劃轉移相關排程及細節。</li>
+									<li>內部知識分享平台 - 由於公司產品屬於較特別的領域，為使團隊能快速了解產品相關知識，於公司內部建立初步知識分享平台，並鼓勵團隊成員共同分享及撰寫。</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2015/09-2018/11</h5></div>
+						<div class="col-sm-8">
+							<h4>高級工程師/工程師</h4>
+							<h5 class="col align-self-start">Winner Mayfair Group 
+								<p style="margin-left:3%; margin-top:1%; font-size: 14px;  line-height: 20px;">- 索夫特科技有限公司 (2018/07~2018/11)<br/>
+								- 博裕科技股份有限公司 (2017/04~2018/07)</br>
+								- 奧文環球科技 (2015/09~2017/04)</p>
+							</h5>
+							<p>
+								<ul>
+									<li>使用多種技術開發及維護系統，包含C#, MS SQL Server, MongoDB, RabbitMQ, Elastic Search, REDIS cache ,Orient Graph database</li>
+									<li>使用微服務架構開發及維護系統</li>
+									<li>敏捷開發流程 Scrum Master - 協助團隊成員釐清專案的歷史、規則及開發上的困難.</li>
+									<li>加速既有報表速率－將原先於Database透過Stored Procedure做運算的程序，利用C# Multi-thread的方式重新編程並將結果彙整於ElasticSearch中，除了加速報表速率外，ElasticSearch內的資料搭配Kibana使用，能提供內部更靈活的資料分析方式。</li>
+									<li>及時紅利回饋系統－即時分析用戶行為作為及時發送回饋的依據（透過Rabbit MQ接收行為，再透過後端程序判別是否符合回饋條件）。</li>
+									<li>分潤制度－以DFS演算法和Graph Database實作無限階層會員的關聯性，類似直銷的分潤系統。</li>
+									<li>半自動化對帳系統 - 利用C#撰寫爬蟲獲取廠商數據與內部數據做檢核是否一致。</li>
+									<li>制定交易資料規範－將來自不同上游廠商的資料作正規化，統一來自不同廠商相同產品的呈現方式。</li>
+									<li>主要產品: 及時紅利系統, 報表系統, 分潤系統, Migration System, 第三方系統服務串接(遊戲, 金流, 簡訊及郵件, 外呼中心, iovation...等).</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2012/09-2013/03</h5></div>
+						<div class="col-sm-8">
+							<h4>工讀生(勞務採購承攬)</h4>
+							<h5>中央研究院資訊科技創新研究中心</h5>
+							<p>
+								<ul>
+									<li>參與中研院系統維護及開發，主要產品：影音串流平台</li>
+									<li>使用技術: PHP, JSP, JAVA, MYSQL</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2011/09-2012/08</h5></div>
+						<div class="col-sm-8">
+							<h4>實習生(產學合作)</h4>
+							<h5>仁寶電腦</h5>
+							<p>
+								<ul>
+									<li>維護工業設計部門人力工時系統，使用C#、MSSQL</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+					<h3>學位</h3>
+					<hr/>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2013/09-2015/07</h5></div>
+						<div class="col-sm-8">
+							<h4>台灣科技大學</h5>
+							<h4>碩士 - 資訊管理系</h4>
+						</div>
+					</div>
+					<div class="job-component">
+						<div class="col-sm-4"><h5 class="date">2009/09-2013/06</h5></div>
+						<div class="col-sm-8">
+							<h4>實踐大學</h5>
+							<h4>學士 - 資訊科技與管理學系</h4>
+							<p>
+								<ul>
+									<li>榮獲 中華電信(CHT)2012創新應用大賽智慧家庭組 亞軍。</li>
+									<li>獲得101年度行政院國家科學委員會大專學生研究計畫補助</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+
+				</div>
 			</div>
-			<div class="col-sm-3">
-				<h3>Skills</h3>
-				<hr/>
-				<p>- Research and trend analysis </p>
-				<p>- Product development  </p>
-				<p>- Project Management </p>
-				<p>- Agile </p>
-				<p>- C#/.Net Framework/ .Net Core </p>
-				<p>- MSSQL</p>
-				<p>- Micro Service/ docker</p>
-				<p>- Elastic Search/ Kibana </p>
-				<p>- Redis </p>
-				<p>- MongoDB  </p>
-				<p>- RabbitMQ</p>
-				<p>- Git</p>
-				<p>- HTML/CSS</p>
-				<!--<p>- React</p>-->
+			<div class="contactskill">
+				<div class="col-sm-3">
+					<h3>聯絡方式</h3>
+					<hr/>
+					<p>台灣台北</p>
+					<p>janetlin229@gmail.com</p>
+					<a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" /></a>
+					<a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" /></a>
+				</div>
+				<div class="col-sm-3">
+					<h3>技能</h3>
+					<hr/>
+					<p>- Research and trend analysis </p>
+					<p>- Product development  </p>
+					<p>- Project Management </p>
+					<p>- Agile </p>
+					<p>- C#/.Net Framework/ .Net Core </p>
+					<p>- MSSQL</p>
+					<p>- Micro Service/ docker</p>
+					<p>- Elastic Search/ Kibana </p>
+					<p>- Redis </p>
+					<p>- MongoDB  </p>
+					<p>- RabbitMQ</p>
+					<p>- Git</p>
+					<p>- HTML/CSS</p>
+					<!--<p>- React</p>-->
+				</div>
 			</div>
 		</div>
 	</div>

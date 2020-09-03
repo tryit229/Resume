@@ -74,10 +74,46 @@
 		.contactskill{
 			flex: 100%;
 			order:2;
+			
 		}
 		body.cn{
 			line-height: 1.6;
 			letter-spacing: 10px;　  
+		}
+		.email{
+			font-weight: bold;
+			text-decoration: underline;
+		}
+		@media print{
+			body{
+				/*transform: scale(.98);*/
+			}
+			.lang{
+				display: none;
+			}
+			.resume{
+				border: none;
+			}
+			.job-component{
+				page-break-inside:avoid;
+			}
+			a:link, a:visited, a {
+			  background: transparent;
+			  color: #222;
+			  text-decoration: underline;
+			  text-align: left;
+			}
+			.email{
+			  font-size: 18px;
+			}
+			.hyberlink{
+				width:100%;
+				display:block;
+			}
+			h3 {
+				font-size: 22px;
+			}
+
 		}
 
 		
@@ -107,7 +143,8 @@
   </head>
   <body>
 	<div class="container">
-		<a onclick="javascript:showEN();" href="#"> English</a>　|　<a onclick="javascript:showCN();" href="#">中文</a>
+		<div class="lang"><a onclick="javascript:showEN();" href="#" > English</a>　|　<a onclick="javascript:showCN();" href="#">中文</a>
+		</div>
 		<div class="resume container" id="en">
 			<div class="experienced">
 				<div class="col-sm-12">
@@ -214,9 +251,9 @@
 					<h3>Contact</h3>
 					<hr/>
 					<p>Taipei City, Taiwan</p>
-					<p>janetlin229@gmail.com</p>
-					<a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" /></a>
-					<a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" /></a>
+					<p class="email">janetlin229@gmail.com</p>
+					<span class="hyberlink"><a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" /></a></span>
+					<span class="hyberlink"><a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" /></a></span>
 				</div>
 				<div class="col-sm-3">
 					<h3>Skills</h3>
@@ -263,7 +300,7 @@
 									<li>制定產品專案範圍 - 在有限時間內，透過與客戶、相關利害單位、開發團隊溝通，分析出每項需求的使用頻率、帶來的效益、開發優先順序等，制定出時程內產品專案開發的合理範圍。</li>
 									<li>資料分析 - 利用既有會員資料、用戶行為、交易紀錄，分析出具有價值的資料，例如：會員大多分布於某地區產品應確保該地區線路穩定、部分會員使用相同裝置上線將考慮這些帳號的回饋是否共同計算、從會員上線時間的曲線中選擇較少人上線的時段做產品維護時間...等原始資料統整及分析。</li>
 									<li>轉移系統規劃 - 與舊技術團隊溝通並規劃轉移相關排程及細節。</li>
-									<li>內部知識分享平台 - 由於公司產品屬於較特別的領域，為使團隊能快速了解產品相關知識，於公司內部建立初步知識分享平台，並鼓勵團隊成員共同分享及撰寫。</li>
+									<li>內部知識分享平台 - 由於公司產品屬於較特別的領域，為使團隊能快速了解產品相關知識，於公司內部建立知識分享平台，並鼓勵團隊成員共同分享及撰寫。</li>
 								</ul>
 							</p>
 						</div>
@@ -347,9 +384,9 @@
 					<h3>聯絡方式</h3>
 					<hr/>
 					<p>台灣台北</p>
-					<p>janetlin229@gmail.com</p>
-					<a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" /></a>
-					<a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" /></a>
+					<p class="email">janetlin229@gmail.com</p>
+					<span class="hyberlink"><a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" /></a></span>
+					<span class="hyberlink"><a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" /></a></span>
 				</div>
 				<div class="col-sm-3">
 					<h3>技能</h3>

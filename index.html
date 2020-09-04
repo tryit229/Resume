@@ -128,7 +128,7 @@
 
 		@media print{
 			body{
-				/*transform: scale(.98);*/
+				transform: scale(.98);
 			}
 			.lang{
 				display: none;
@@ -186,6 +186,13 @@
                 cn.style.display = 'block';
                 en.style.display = 'none';
             } 
+        }
+		
+		function imgErr() {
+            var pic = document.getElementById('profilepic');
+            pic.style.display = 'none';
+            pic.style.float = 'right';
+            
         }
 
     </script>
@@ -337,19 +344,20 @@
 		</div>
 		<!---------------------------------------------------------------------------->
 		<div class="resume container" id="cn" class="cn">
-				<div class="col-sm-3 jpic">
-				<img class="jpic" src="j.jpg"/>
+			<div class="jpic ">
+				<img class="jpic col-sm-3" src="j.jpg" id="profilepic" onerror="javascript:imgErr();"/>
 			</div>
 			<div class="col-sm-9 profile">
 				<h1>林珏慧 Janet Lin</h1>
 				<h2>產品經理/ 軟體工程師</h2>
-				<p>作為工程師的我，喜歡思考每項開發帶來的價值。<br/>
-				作為產品管理者的我，喜歡思考產品規格是否符合市場需求，如何運用技術輔助決策且不被綁架。</p>
-				<p>台灣台北</p>
+				<p style="margin-left:3%;">作為工程師的我，喜歡思考每項開發帶來的價值。<br/>
+				作為產品管理者的我，喜歡思考產品規格是否符合市場需求，如何運用技術輔助決策且不被綁架。</p><br/>
+				<p><span>台灣台北</span>				
+				<span class="hyberlink"><a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" /></a></span>
+				<span class="hyberlink"><a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" /></a></span></p>
 				<p class="email">janetlin229@gmail.com</p>
 				<p class="email"><a href="http://janetlin.rdpm.me/">http://janetlin.rdpm.me</a></p>
-				<span class="hyberlink"><a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" /></a></span>
-				<span class="hyberlink"><a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" /></a></span>
+
 			</div>
 
 			<div class="experienced">
@@ -362,13 +370,13 @@
 							<h5>Winner Mayfair Group - 索夫特科技有限公司 (Nov 2018 ~ Feb 2020)</h5>
 							<p>
 								<ul>
-									<li>敏捷式開發管理 - 擔任Product Owner或Scrum Master，將大專案切分為小任務，協助開發團隊分階段完成目標，及排除相關困難。</li>
-									<li>溝通協調 - 與客戶溝通深入了解需求及背後的原因，每兩週定期與客戶共同檢視目前產品開發成品是否符合需求，以及確認即將開發的需求仍符合目前市場需求。</li>
-									<li>設計產品Prototype - 與客戶、UIUX設計師、開發團隊討論可行性，包含：遊戲平台管理後台, 報表系統, 紅利系統, 代理人廣告系統...等。</li>
-									<li>制定產品專案範圍 - 在有限時間內，透過與客戶、相關利害單位、開發團隊溝通，分析出每項需求的使用頻率、帶來的效益、開發優先順序等，制定出時程內產品專案開發的合理範圍。</li>
-									<li>資料分析 - 利用既有會員資料、用戶行為、交易紀錄，分析出具有價值的資料，例如：會員大多分布於某地區產品應確保該地區線路穩定、部分會員使用相同裝置上線將考慮這些帳號的回饋是否共同計算、從會員上線時間的曲線中選擇較少人上線的時段做產品維護時間...等原始資料統整及分析。</li>
-									<li>轉移系統規劃 - 與舊技術團隊溝通並規劃轉移相關排程及細節。</li>
-									<li>內部知識分享平台 - 由於公司產品屬於較特別的領域，為使團隊能快速了解產品相關知識，於公司內部建立知識分享平台，並鼓勵團隊成員共同分享及撰寫。</li>
+									<li><b>敏捷式開發管理</b> - 擔任Product Owner或Scrum Master，將大專案切分為小任務，協助開發團隊分階段完成目標，及排除相關困難。</li>
+									<li><b>溝通協調</b> - 與客戶溝通深入了解需求及背後的原因，每兩週定期與客戶共同檢視目前產品開發成品是否符合需求，以及確認即將開發的需求仍符合目前市場需求。</li>
+									<li><b>設計產品Prototype</b> - 與客戶、UIUX設計師、開發團隊討論可行性，包含：遊戲平台管理後台, 報表系統, 紅利系統, 代理人廣告系統...等。</li>
+									<li><b>制定產品專案範圍</b> - 在有限時間內，透過與客戶、相關利害單位、開發團隊溝通，分析出每項需求的使用頻率、帶來的效益、開發優先順序等，制定出時程內產品專案開發的合理範圍。</li>
+									<li><b>資料分析</b> - 利用既有會員資料、用戶行為、交易紀錄，分析出具有價值的資料，例如：會員大多分布於某地區產品應確保該地區線路穩定、部分會員使用相同裝置上線將考慮這些帳號的回饋是否共同計算、從會員上線時間的曲線中選擇較少人上線的時段做產品維護時間...等原始資料統整及分析。</li>
+									<li><b>轉移系統規劃</b> - 與舊技術團隊溝通並規劃轉移相關排程及細節。</li>
+									<li><b>內部知識分享平台</b> - 由於公司產品屬於較特別的領域，為使團隊能快速了解產品相關知識，於公司內部建立知識分享平台，並鼓勵團隊成員共同分享及撰寫。</li>
 								</ul>
 							</p>
 						</div>
@@ -383,15 +391,15 @@
 							</h5>
 							<p>
 								<ul>
-									<li>使用多種技術開發及維護系統，包含C#, MS SQL Server, MongoDB, RabbitMQ, Elastic Search, REDIS cache ,Orient Graph database</li>
-									<li>使用微服務架構開發及維護系統</li>
-									<li>敏捷開發流程 Scrum Master - 協助團隊成員釐清專案的歷史、規則及開發上的困難.</li>
-									<li>加速既有報表速率－將原先於Database透過Stored Procedure做運算的程序，利用C# Multi-thread的方式重新編程並將結果彙整於ElasticSearch中，除了加速報表速率外，ElasticSearch內的資料搭配Kibana使用，能提供內部更靈活的資料分析方式。</li>
-									<li>及時紅利回饋系統－即時分析用戶行為作為及時發送回饋的依據（透過Rabbit MQ接收行為，再透過後端程序判別是否符合回饋條件）。</li>
-									<li>分潤制度－以DFS演算法和Graph Database實作無限階層會員的關聯性，類似直銷的分潤系統。</li>
-									<li>半自動化對帳系統 - 利用C#撰寫爬蟲獲取廠商數據與內部數據做檢核是否一致。</li>
-									<li>制定交易資料規範－將來自不同上游廠商的資料作正規化，統一來自不同廠商相同產品的呈現方式。</li>
-									<li>主要產品: 及時紅利系統, 報表系統, 分潤系統, Migration System, 第三方系統服務串接(遊戲, 金流, 簡訊及郵件, 外呼中心, iovation...等).</li>
+									<li><b>使用多種技術開發及維護系統</b> - 包含C#, MS SQL Server, MongoDB, RabbitMQ, Elastic Search, REDIS cache ,Orient Graph database</li>
+									<li><b>使用微服務架構開發及維護系統</b></li>
+									<li><b>敏捷開發流程 Scrum Master</b> - 協助團隊成員釐清專案的歷史、規則及開發上的困難.</li>
+									<li><b>加速既有報表速率</b> - 將原先於Database透過Stored Procedure做運算的程序，利用C# Multi-thread的方式重新編程並將結果彙整於ElasticSearch中，除了加速報表速率外，ElasticSearch內的資料搭配Kibana使用，能提供內部更靈活的資料分析方式。</li>
+									<li><b>及時紅利回饋系統</b> - 即時分析用戶行為作為及時發送回饋的依據（透過Rabbit MQ接收行為，再透過後端程序判別是否符合回饋條件）。</li>
+									<li><b>分潤制度</b> - 以DFS演算法和Graph Database實作無限階層會員的關聯性，類似直銷的分潤系統。</li>
+									<li><b>半自動化對帳系統</b> - 利用C#撰寫爬蟲獲取廠商數據與內部數據做檢核是否一致。</li>
+									<li><b>制定交易資料規範</b> - 將來自不同上游廠商的資料作正規化，統一來自不同廠商相同產品的呈現方式。</li>
+									<li><b>主要產品</b>: 及時紅利系統, 報表系統, 分潤系統, Migration System, 第三方系統服務串接(遊戲, 金流, 簡訊及郵件, 外呼中心, iovation...等).</li>
 								</ul>
 							</p>
 						</div>

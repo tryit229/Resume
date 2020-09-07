@@ -41,6 +41,7 @@
 		h5 {
 			color: #343434;
 			font-size: 20px;
+			line-height: 1.5;
 		}
 		li {
 			color:#343434;
@@ -51,7 +52,7 @@
 		p {
 			color:#343434;
 			/*font-size: 13px;*/
-			line-height: 1.3;
+			line-height: 1.5;
 			letter-spacing: 0px;　 
 			margin-bottom: 0px
 		}
@@ -73,10 +74,6 @@
 		.resume{
 			border: 1px solid #e8ecf0;
 			box-shadow: 0 0 10px rgba(88,88,95,0.12);
-			/*box-shadow:2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4);*/
-			/*box-shadow:2px 2px 5px #000;*/
-			/*box-shadow:0 0 10px #000;*/
-			/*flex-wrap: wrap;*/
 		}
 		.icon{
 			width: 18px;
@@ -125,10 +122,13 @@
 			line-height: 16px;
 			padding-top: 10px;
 		}
+		.skillsline{
+			display:none;
+		}
 
 		@media print{
 			body{
-				transform: scale(.98);
+				transform: scale(1);
 			}
 			.lang{
 				display: none;
@@ -137,7 +137,7 @@
 				border: none;
 			}
 			.job-component{
-				page-break-inside:avoid;
+				page-break-inside:inherit;
 			}
 			a:link, a:visited, a {
 			  background: transparent;
@@ -148,20 +148,31 @@
 			.email{
 			  font-size: 18px;
 			}
-			/*.hyberlink{
-				width:100%;
-				display:block;
-			}*/
 			h3 {
-				font-size: 22px;
+				font-size: 26px;
 			}
-			.jpic{
-				width: 20px;
-				margin-top: 0px;
 
-			}
 			a[href]:after {
 				content: none !important;
+			}
+			
+			.jpic{
+				float:left;
+				width:180px;
+			}
+			.profile{
+				float:left;
+				width:550px;
+			}
+			
+			.experienced{
+				float:left;
+			}
+			.contactskill{
+				display:none;
+			}
+			.skillsline{
+				display:block;
 			}
 
 		}
@@ -188,11 +199,10 @@
             } 
         }
 		
-		function imgErr() {
-            var pic = document.getElementById('profilepic');
-            pic.style.display = 'none';
-            pic.style.float = 'right';
-            
+		function imgErr(img) {
+            var pic = document.getElementById(img);
+			pic.style.display = 'none';
+			pic.style.float = 'right';
         }
 
     </script>
@@ -204,7 +214,7 @@
 	<!--<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">-->
 	<meta property="og:image" content="woman.png">
-	<meta property="og:description" content="軟體工程師/產品經理/專案經理。盡力追求更好的明天">
+	<meta property="og:description" content="軟體工程師/產品經理/專案經理。盡力追求更好的產品。">
 	<link rel="Shortcut Icon" type="image/x-icon" href="woman.png" />
   </head>
   <body>
@@ -319,8 +329,8 @@
 					<p>Taipei City, Taiwan</p>
 					<p class="email">janetlin229@gmail.com</p>
 					<p class="email"><a href="http://janetlin.rdpm.me/">http://janetlin.rdpm.me</a></p>
-					<span class="hyberlink"><a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" /></a></span>
-					<span class="hyberlink"><a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" /></a></span>
+					<span class="hyberlink"><a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca"  id="linkedin" onerror="javascript:imgErr(linkedin);" /></a></span>
+					<span class="hyberlink"><a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" id="cake" onerror="javascript:imgErr(cake);" /></a></span></p>
 				</div>
 				<div class="col-sm-3">
 					<h3>Skills</h3>
@@ -329,35 +339,49 @@
 					<p>- Product development  </p>
 					<p>- Project Management </p>
 					<p>- Agile </p>
-					<p>- C#/.Net Framework/ .Net Core </p>
+					<p>- C#</p>
+					<p>- .Net Framework</p>
+					<p>- .Net Core </p>
 					<p>- MSSQL</p>
-					<p>- Micro Service/ docker</p>
+					<p>- Micro Service</p>
+					<p>- Docker</p>
 					<p>- Elastic Search/ Kibana </p>
 					<p>- Redis </p>
 					<p>- MongoDB  </p>
 					<p>- RabbitMQ</p>
 					<p>- Git</p>
 					<p>- HTML/CSS</p>
+					<p>- Javascript</p>
 					<!--<p>- React</p>-->
 				</div>
 			</div>
 		</div>
 		<!---------------------------------------------------------------------------->
 		<div class="resume container" id="cn" class="cn">
-			<div class="jpic ">
-				<img class="jpic col-sm-3" src="j.jpg" id="profilepic" onerror="javascript:imgErr();"/>
+			<div class="jpic col-sm-3">
+				<img class="jpic" src="J.jpg" id="profilepic" onerror="javascript:imgErr(profilepic);"/>
 			</div>
 			<div class="col-sm-9 profile">
 				<h1>林珏慧 Janet Lin</h1>
 				<h2>產品經理/ 軟體工程師</h2>
-				<p style="margin-left:3%;">作為工程師的我，喜歡思考每項開發帶來的價值。<br/>
-				作為產品管理者的我，喜歡思考產品規格是否符合市場需求，如何運用技術輔助決策且不被綁架。</p><br/>
+				<p style="margin-left:3%;">盡力追求更好的產品開發。<br/>作為工程師的我，喜歡思考每項開發帶來的價值。<br/>
+				作為產品管理者的我，善於利用資料分析發覺客戶的煩惱並從中找到商業價值。</p>
 				<p><span>台灣台北</span>				
-				<span class="hyberlink"><a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" /></a></span>
-				<span class="hyberlink"><a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" /></a></span></p>
+				<span class="hyberlink"><a href="https://www.linkedin.com/in/janet-lin-065392125/"><img class="icon" src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca"  id="linkedin" onerror="javascript:imgErr(linkedin);" /></a></span>
+				<span class="hyberlink"><a href="https://www.cakeresume.com/s--pp4PiPI-Ia8zdlPUdd1R9Q--/janet-lin-26d175"><img class="icon" src="https://www.cakeresume.com/favicons/apple-touch-icon-60x60.png" id="cake" onerror="javascript:imgErr(cake);" /></a></span></p>
 				<p class="email">janetlin229@gmail.com</p>
 				<p class="email"><a href="http://janetlin.rdpm.me/">http://janetlin.rdpm.me</a></p>
 
+			</div>
+			<div class="skillsline">
+				<div class="col-sm-12">
+					<h3>技能</h3>
+					<hr/>
+					<p>Research and trend analysis、 Product development 、 Project Management、 Agile、</p>
+					<p>C#、.Net Framework、.Net Core、 Micro Service、 Docker、RabbitMQ、 Git、 HTML、 CSS、 Javascript、</p>
+					<p>MSSQL、Elastic Search、 Kibana、 Redis、 MongoDB、 RabbitMQ</p>
+					<!--<p>- React</p>-->
+				</div>
 			</div>
 
 			<div class="experienced">
@@ -431,14 +455,12 @@
 					<hr/>
 					<div class="job-component">
 						<div class="col-sm-12">
-							<h4>台灣科技大學 (2013 ~ 2015)</h5>
-							<h4>碩士 - 資訊管理系</h4>
+							<h4>台灣科技大學 資訊管理系 碩士 (2013/9 ~ 2015/6)</h5>
 						</div>
 					</div>
 					<div class="job-component">
 						<div class="col-sm-12">
-							<h4>實踐大學 (2009 ~ 2013)</h5>
-							<h4>學士 - 資訊科技與管理學系</h4>
+							<h4>實踐大學 資訊科技與管理學系 學士 (2009/9 ~ 2013/6)</h5>
 							<p>
 								<ul>
 									<li>榮獲 中華電信(CHT)2012創新應用大賽智慧家庭組 亞軍。</li>
@@ -458,19 +480,24 @@
 					<p>- Product development  </p>
 					<p>- Project Management </p>
 					<p>- Agile </p>
-					<p>- C#/.Net Framework/ .Net Core </p>
+					<p>- C#</p>
+					<p>- .Net Framework</p>
+					<p>- .Net Core </p>
 					<p>- MSSQL</p>
-					<p>- Micro Service/ docker</p>
+					<p>- Micro Service</p>
+					<p>- Docker</p>
 					<p>- Elastic Search/ Kibana </p>
 					<p>- Redis </p>
 					<p>- MongoDB  </p>
 					<p>- RabbitMQ</p>
 					<p>- Git</p>
 					<p>- HTML/CSS</p>
+					<p>- Javascript</p>
 					<!--<p>- React</p>-->
 				</div>
 			</div>
 		</div>
+		<div style="float:right;">Last updated on September 7th, 2020</div>
 	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
